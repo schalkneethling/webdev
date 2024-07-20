@@ -1,0 +1,91 @@
+@import "./lib/reset.css";
+@import "./lib/skip-to-nav.css";
+@import "./custom-properties.css";
+@import "./button.css";
+
+body {
+  font-family: var(--typography-body-family);
+}
+
+h1 {
+  font-size: var(--typography-size-xxl);
+}
+
+.primary-nav {
+  list-style: none;
+  margin-block-start: var(--size-12);
+  padding: 0;
+
+  a {
+    border-block-end: 1px solid var(--color-neutral-70);
+    border-inline-start: 0 solid transparent;
+    color: var(--color-neutral-90);
+    display: block;
+    padding: var(--size-6);
+    padding-inline-start: 0;
+    text-decoration: none;
+    transition: border-inline-start 0.3s;
+  }
+
+  a:focus,
+  a:hover,
+  a:active {
+    background-color: var(--color-neutral-90);
+    border-inline-start: var(--size-4) solid transparent;
+    color: var(--color-neutral-inverted);
+  }
+
+  @media only screen and (min-width: 63.9375rem) {
+    a {
+      border: 1px solid var(--color-neutral-70);
+      border-inline-start: 1px solid var(--color-neutral-70);
+      padding-inline-start: var(--size-6);
+      transition: background-color 0.3s;
+    }
+
+    a:focus,
+    a:hover,
+    a:active {
+      background-color: var(--color-neutral-90);
+      border-inline-start: 1px solid var(--color-neutral-70);
+      color: var(--color-neutral-inverted);
+    }
+  }
+}
+
+@media only screen and (min-width: 63.9375rem) {
+  .primary-nav a {
+    border: 1px solid var(--color-neutral-70);
+    border-inline-start: 1px solid var(--color-neutral-70);
+  }
+}
+
+.main-hero-container,
+.page-header {
+  padding: var(--size-12);
+}
+
+@media only screen and (min-width: 47.9375rem) {
+  .page-header {
+    align-items: center;
+    display: flex;
+    padding: var(--size-24);
+    justify-content: space-between;
+  }
+
+  .page-header-logo {
+    display: block;
+    max-inline-size: 300px;
+  }
+
+  .primary-nav {
+    align-items: center;
+    display: flex;
+    gap: var(--size-12);
+  }
+}
+
+.main-hero-lead {
+  font-size: var(--typography-size-medium);
+  margin-block-end: var(--size-12);
+}
