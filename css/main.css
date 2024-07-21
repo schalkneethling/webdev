@@ -1,14 +1,27 @@
-@import "./lib/reset.css";
-@import "./lib/skip-to-nav.css";
-@import "./custom-properties.css";
-@import "./button.css";
+@layer utils, core;
+
+@import "./utils.css" layer(utils);
+
+@import "./lib/reset.css" layer(core);
+@import "./lib/skip-to-nav.css" layer(core);
+@import "./custom-properties.css" layer(core);
+@import "./button.css" layer(core);
 
 body {
   font-family: var(--typography-body-family);
 }
 
+h1,
+h2 {
+  font-family: var(--typography-heading-family);
+}
+
 h1 {
   font-size: var(--typography-size-xxl);
+}
+
+h2 {
+  font-size: var(--typography-size-xl);
 }
 
 .primary-nav {
@@ -88,4 +101,44 @@ h1 {
 .main-hero-lead {
   font-size: var(--typography-size-medium);
   margin-block-end: var(--size-12);
+}
+
+.principles-section-title {
+  background-color: var(--color-matterhorn);
+  border-block-end: 0.5rem solid var(--color-wax);
+  color: var(--color-neutral-inverted);
+  font-size: var(--typography-size-large);
+  padding: var(--size-12);
+  text-wrap: initial;
+}
+
+.principles-list {
+  background-color: var(--color-neutral-90);
+  color: var(--color-neutral-inverted);
+  display: flex;
+  flex-flow: column;
+  gap: var(--size-12);
+  font-size: var(--typography-size-small-medium);
+  padding: var(--size-12);
+
+  @media only screen and (min-width: 63.9375rem) {
+    flex-flow: row wrap;
+  }
+
+  .principles-list-item {
+    background-color: var(--color-plum);
+    border-inline-start: 0.5rem solid var(--color-wax);
+    padding: var(--size-12);
+
+    @media only screen and (min-width: 63.9375rem) {
+      flex: 0 1 30%;
+    }
+  }
+}
+
+.text-emphasis {
+  color: var(--color-wax);
+  font-size: var(--typography-size-medium);
+  font-style: normal;
+  font-weight: 600;
 }

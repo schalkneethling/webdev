@@ -11,6 +11,10 @@
   --color-neutral-80: #343434;
   --color-neutral-90: #1b1b1b;
 
+  --color-matterhorn: #534e4d;
+  --color-plum: #393745;
+  --color-wax: #e4b638;
+
   --color-neutral-inverted: #fff;
 
   --size-56: 7rem;
@@ -31,6 +35,8 @@
   --typography-body-family: -apple-system, BlinkMacSystemFont, avenir next,
     avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
     arial, sans-serif;
+
+  --typography-document-line-height: 1.5;
 
   --typography-size-display: 2.986rem;
   --typography-size-xxl: 2.488rem;
